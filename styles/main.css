@@ -1,33 +1,42 @@
+/* Browser-level container properties */
 html {
 	margin: 						0 0 0 0;
 	padding: 						0 0 0 0;
+	height:							auto;
+	min-height:					100%;
+	width:							100%;
 }
 
 body {
 	margin: 						0 0 0 0;
 	padding: 						0 0 0 0;
+	height:							auto;
+	min-height:					100%;
+	width:							100%;
 
 	background-color:		#efefef;
-	/*background-color: #a65016;*/
 }
 
 div#container {
-	border:							1px solid green;
+	border:							0px solid green;
+	height:							auto;
+	height:							100%;
 	min-height:					100%;
 	width:							1200px;
 	margin-left:				auto;
 	margin-right:				auto;
+	margin-bottom:			-30px;
 }
 
 div#banner {
 	padding-left:				0px;
-	border:							1px solid black;
+	border:							0px solid black;
 	height:							150px;
 	width:							100%;
 }
 
 div#left_preview {
-	border:							1px solid black;
+	border:							0px solid black;
 	height:							325px;
 	width:							220px;
 	margin-top:					150px;
@@ -39,7 +48,7 @@ div#left_preview {
 }
 
 div#right_preview {
-	border:							1px solid black;
+	border:							0px solid black;
 	height:							325px;
 	width:							220px;
 	margin-top:					150px;
@@ -51,7 +60,7 @@ div#right_preview {
 }
 
 div#content_outer {
-	border:							1px solid black;
+	border:							0px solid black;
 	height:							655px;
 	max-height:					655px;
 	width:							690px;
@@ -84,7 +93,6 @@ div#cap {
 div#stuff {
 	border:						1px solid #aeaeae;
 	width:						100%;
-	min-height:				100%;
 	background-color: #ffffff;
 	height:						auto;
 	font-family:			"Helvetica";
@@ -100,17 +108,26 @@ img.drop_shadow_big {
 	margin-left: -280px;
 }
 
-#footer { 
-	border:					1px solid pink;
-	position:				relative;
+div#footer { 
+	border:					0px solid pink;
 	/*margin-top:			-150px; /* negative value of footer height */
-	/*height:					150px;*/
-	clear:					both;
+	height:					30px;
 	text-align:			center;
+	margin-left:		auto;
+	margin-right:		auto;
+	clear:					both;
+	min-width:			1200px; /* Must be the same as container.width */
 }
 
-#content {
-	border:	1px solid blue;
+div#push {
+	height:					30px; /* Must be the same as footer.height, container.margin_bottom */
+	clear:					both;
+	border:					0px solid blue;
+}
+
+div#content {
+	border:	0px solid blue;
+	height: auto;
 	min-height: 250px;
 }
 

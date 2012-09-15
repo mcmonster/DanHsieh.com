@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Dan K. Hsieh</title>
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="styles/highslide.css" />
+		<script type="text/javascript" src="./scripts/highslide-with-gallery.js"></script>
+		<script type="text/javascript" src="./scripts/main.js"></script>
+		<script type="text/javascript">
+			hs.graphicsDir = "./graphics/";
+			hs.align = 'center';
+			hs.transitions = ['expand', 'crossfade'];
+			hs.wrapperClassName = 'dark borderless floating-caption';
+			hs.fadeInOut = true;
+			hs.dimmingOpacity = .75;
+
+			if (hs.addSlideshow)
+				hs.addSlideshow({
+					interval: 5000,
+					repeat: false,
+					useControls: true,
+					fixedControls: 'fit',
+					overlayOptions: {
+						opacity: .6,
+						position: 'bottom center',
+						hideOnMouseOut: true
+					}
+				});
+		</script>
+		<script type="text/javascript" src="./scripts/pdf.js"></script>
+		<script type="text/javascript">
+			PDFJS.workerSrc = './scripts/pdf.js';
+		</script>
+		<script type="text/javascript" src="./scripts/dan_pdf.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="banner">
+				<a href="mailto:dan.k.hsieh@gmail.com">
+				<img src="banner.png" title="Click To Contact!"/>
+				</a>
+			</div>
+			<div id="left_preview">
+				<img src='images/about_me_preview.png' onclick='slideAboutMeRight()' />
+				<img class='drop_shadow' src='images/drop_shadow.png' />
+			</div>
+			<div id="content_outer">
+				<div id="content">
+					<script type="text/javascript">
+						fetch('content','gallery.html');
+					</script>
+				</div>
+				<img class='drop_shadow_big' src='images/drop_shadow_big.png' />
+			</div>
+			<div id="right_preview">
+				<img src='images/resume_preview.png' onclick='slideResumeLeft()' />
+				<img class='drop_shadow' src='images/drop_shadow.png' />
+			</div>
+			<div id="footer">
+				<a href="mailto:dan.k.hsieh@gmail.com" style="	color: #000000;
+	text-decoration: none; font-family: 'Helvetica';">Contact Dan</a>
+			</div>
+		</div>
+	</body>
+</html>
